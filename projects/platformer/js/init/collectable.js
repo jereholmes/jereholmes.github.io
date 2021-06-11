@@ -37,17 +37,20 @@
         // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
         
         // example: 
-        createCollectable(type.db, 100, 600, 6, 0.7);
-        createCollectable(type.kennedi, 7, 240, 6, 0.7);
+        createCollectable(type.grace, 7, 240, 6, 0.7);
         createCollectable(type.kennedi, 550, 140, 6, 0.7);
         createCollectable(type.kennedi, 450, 140, 6, 0.7);
         createCollectable(type.grace, 650, 140, 6, 0.7);
         createCollectable(type.steve, 47, 440, 6, 0.7);
         createCollectable(type.steve, 300, 340, 6, 0.7);
         createCollectable(type.steve, 400, 340, 6, 0.7);
-        createCollectable(type.db, 500, 540, 6, 0.7);
+        createCollectable(type.db, 400, 540, 6, 0.7);
         createCollectable(type.max, 650, 540, 6, 0.7);
-        createCollectable(type.max, 600, 540, 6, 0.7);
+        createCollectable(type.max, 550, 540, 6, 0.7);
+        createCollectable(type.kennedi, 1000, 340, 6, 0.7);
+        createCollectable(type.kennedi, 1100, 340, 6, 0.7);
+        createCollectable(type.kennedi, 1200, 340, 6, 0.7);
+        createCollectable(type.kennedi, 1300, 340, 6, 0.7);
         
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
