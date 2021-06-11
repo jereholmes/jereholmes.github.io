@@ -47,7 +47,7 @@
         createCollectable(type.db, 400, 540, 6, 0.7);
         createCollectable(type.max, 650, 540, 6, 0.7);
         createCollectable(type.max, 550, 540, 6, 0.7);
-        createCollectable(type.kennedi, 1000, 340, 6, 0.7);
+        
         createCollectable(type.kennedi, 1100, 340, 6, 0.7);
         createCollectable(type.kennedi, 1200, 340, 6, 0.7);
         createCollectable(type.kennedi, 1300, 340, 6, 0.7);
