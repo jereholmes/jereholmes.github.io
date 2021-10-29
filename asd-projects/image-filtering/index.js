@@ -18,7 +18,13 @@ applyFilter
 
 // TODO 1, 2 & 4: Create the applyFilter function here
 function applyFilter(){
-for ( ; ; )
+for (var r = 0; r < image.length; r++) {
+    var rgbString = image[r];
+    
+    for (var c = 0; c < rgbString.length; c++) { 
+        var value = image[r][c];
+        
+    }
 }
 
 // TODO 6: Create the applyFilterNoBackground function
