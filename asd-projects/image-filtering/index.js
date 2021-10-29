@@ -24,7 +24,8 @@ for (var r = 0; r < image.length; r++) {
     for (var c = 0; c < row.length; c++) { 
         var rgbString = image[r][c];
         var rgbNumbers[BLUE] = 0;
-        
+        rgbNumbers()
+
     }
 }
 
