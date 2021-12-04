@@ -1,0 +1,38 @@
+User Story / Gameplay
+Describe the gameplay
+A two player game where each player controls a paddle on opposite side of the screen. A ball is hit back and forth between the two paddles, and the top and bottom walls until the ball passes one of the players paddle 
+
+What are the conditions when the game begins?
+The ball 
+
+Does the game have an end? If so, what are the conditions for when it ends?
+Yes there is a end whenever the first player makes it to the set amount of points/11 points.
+
+What ifs will there be?
+if the ball hits the paddle it should bounce back 
+if the ball hits the bottom/top wall the ball bouces off
+if the ball passes the paddle count +1 points to a side 
+if the ball passes paddle reposition ball
+if the points are at 11 ends game
+
+Visual Game Components:
+What are the visual game components? For example, in Bouncing Box, the game components were the board and the box.
+The visual game components should be the ball the paddle and the score.
+
+Which will be static? (the board)
+The score and the background will be static
+
+Which will be animated? (the box)
+Both the ball and the paddles will be animated.
+
+What data will you need to manage each game component? For example, in Bouncing Box, the data values were positionX, speedX, and points.
+You will need a positionY for both paddles and have a positionX and positionY for the ball. You will also need to add points for each side.
+
+Events / Logic
+What events will occur in this game? (timer events, keyboard events, clicking events?)
+To move the left paddle you will use W to go up and S to go down and the other side you will use the up arrow key to go up and the down arrown key to go down. I will try to add a click event to pause the game
+
+How do those events affect the data of the program?
+The clike event will affect the data by stopping movment of the ball and the keyboard events will move the position of the paddles.
+
+For each "event", write out the high-level logic of what will happen. It is better (and tricky) to be as specific as you can while remaining high-level!
