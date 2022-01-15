@@ -51,8 +51,15 @@ while(left < right){
   while(array[left].value < pivot){
       left++
   }
-  return left + 1
 }
+  while(array[right].value < pivot){
+    right++
+  }
+  if(left < right){
+swap(array, left, right)
+updateCounter(quickCounter)
+await sleep();
+  }
 }
 
 
