@@ -52,8 +52,8 @@ while(left < right){
       left++
   }
 }
-  while(array[right].value < pivot){
-    right++
+  while(array[right].value > pivot){
+    right--
   }
   if(left < right){
 swap(array, left, right)
