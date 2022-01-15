@@ -60,6 +60,7 @@ swap(array, left, right)
 updateCounter(quickCounter)
 await sleep();
   }
+  return left + 1
 }
 
 
