@@ -51,10 +51,10 @@ while(left < right){
   while(array[left].value < pivot){
       left++
   }
-}
   while(array[right].value > pivot){
     right--
   }
+}
   if(left < right){
 swap(array, left, right)
 updateCounter(quickCounter)
