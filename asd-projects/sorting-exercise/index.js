@@ -35,12 +35,13 @@ async function bubbleSort(array) {
 async function quickSort(array, left, right){
   if (array.length > 1){
   var index = await partition(array, left, right);
-  }
+
   if (left < index -1){
   await quickSort(array, left, index-1)
   }
   if(right > index){
     await quickSort(array, index, right)
+  }
   }
 }
 
@@ -55,7 +56,7 @@ while(left < right){
     right--
   }
   if(left < right){
-swap(array, left, right)
+swap(left, right, array)
 updateCounter(quickCounter)
 await sleep();
   }
