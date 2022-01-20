@@ -41,7 +41,17 @@ function runProgram(){
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
-
+  function factory(elementId) {
+    var gameItem = {};
+    gameItem.id = elementId;
+    gameItem.x = parseFloat($(elementId).css('left'));
+    gameItem.y = parseFloat($(elementId).css('top'));
+    gameItem.width = $(elementId).width();
+    gameItem.height = $(elementId).height();
+    gameItem.speedX = 0;
+    gameItem.speedY = 0;
+    return gameItem;
+    }
   
   function endGame() {
     // stop the interval timer
