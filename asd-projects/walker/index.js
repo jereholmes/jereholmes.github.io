@@ -24,7 +24,6 @@ var KEY = {
 
 
   // Game Item Objects
-
   var positionX = 0; 
   var speedX = 0; 
   var positionY = 0;
