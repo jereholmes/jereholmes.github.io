@@ -152,8 +152,9 @@ function handleKeyUp(event) {
   }
 
   function startBall(){
-    $("#ball").css("right", ball.x);
-    $("#ball").css("top", ball.y);
+    $('#ball')
+    .css('top', 210)
+    .css('left', 210)
     
   }
   
