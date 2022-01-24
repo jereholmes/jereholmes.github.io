@@ -40,7 +40,7 @@ return gameItem;
 var leftPaddle = factory("#leftPaddle");
 var rightPaddle = factory("#rightPaddle");
 var ball = factory("#ball");
-
+var board = factory('#board');
 
 
 
@@ -151,6 +151,7 @@ function handleKeyUp(event) {
     ball.y += ball.speedY
   }
 
+//ball and paddles move
   function moveObject() {
     $("#rightPaddle").css("top",rightPaddle.y);
     $("#leftPaddle").css("top", leftPaddle.y);
@@ -158,6 +159,7 @@ function handleKeyUp(event) {
     $(ball.id).css('top', ball.y);
   }
  
+  //start the ball moving random
   function startBall(){
     $('#ball')
     .css('top', 220)
@@ -170,7 +172,7 @@ function handleKeyUp(event) {
    
   }
 
-  function wallCollision(board){
+  function wallCollision(obj){
 
 }
 
