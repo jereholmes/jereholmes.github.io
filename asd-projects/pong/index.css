@@ -19,6 +19,7 @@ body {
   height: 80px;
   border-radius: 10px;
   position: absolute;
+  top: 160px
 }
   #rightPaddle {
     background-color: red;
@@ -27,6 +28,7 @@ body {
     border-radius: 10px;
     position: absolute;
     left: 420px;
+    top: 160px
   }
     #ball {
       background-color: rgb(56, 61, 61);
@@ -34,6 +36,8 @@ body {
       height: 20px;
       border-radius: 10px;
       position: absolute;
+      left: 210px;
+      top: 210px;
     }
 
     #leftScore {
