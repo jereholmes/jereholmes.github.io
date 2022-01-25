@@ -13,7 +13,6 @@ function runProgram(){
   const BOARD_WIDTH = $("#board").width();
   const BOARD_HEIGHT = $("#board").height();
 
-  console.log(BOARD_WIDTH, BOARD_HEIGHT)
 
   var KEY = {
     "UP": 38,
@@ -40,7 +39,7 @@ return gameItem;
 var leftPaddle = factory("#leftPaddle");
 var rightPaddle = factory("#rightPaddle");
 var ball = factory("#ball");
-var board = factory('#board');
+var board = factory("#board");
 
 
 
@@ -55,7 +54,7 @@ var board = factory('#board');
   $(document).on('keyup', handleKeyUp2); 
   startBall()
 
-
+//move right paddles
 function handleKeyDown(event) { 
   
    if (event.which === KEY.W) {
@@ -65,14 +64,20 @@ function handleKeyDown(event) {
     console.log("down pressed");
   }
 
- if (event.which === KEY.W){
+ if (event.which === KEY.W && wallColision(leftPaddle) === "truetop"){
+    leftPaddle.speedY = 0
+  }
+  else if (event.which === KEY.W  ){
     leftPaddle.speedY = -5
+  }
+  else if (event.which === KEY.S && wallColision(leftPaddle) === "truebottom"){
+    leftPaddle.speedY = 0
   }
   else if (event.which === KEY.S){
     leftPaddle.speedY = 5
   }
 }
-
+//sstop right paddles 
 function handleKeyUp(event) {
  if (event.which === KEY.W){
     leftPaddle.speedY = 0
@@ -82,7 +87,7 @@ function handleKeyUp(event) {
   }
   }
 
-
+//move left paddles
   function handleKeyDown2(event) { 
   
    if (event.which === KEY.UP) {
@@ -93,14 +98,22 @@ function handleKeyUp(event) {
       console.log("down pressed");
     }
   
-   if (event.which === KEY.UP){
-      rightPaddle.speedY = -5
-    }
-    else if (event.which === KEY.DOWN){
+     if (event.which === KEY.DOWN && wallColision(rightPaddle) === "truebottom"  ){
+      rightPaddle.speedY = 0
+      console.log(wallColision)
+  }
+    else if(event.which === KEY.DOWN ){
       rightPaddle.speedY = 5
     }
-  }
-  
+    else if (event.which === KEY.UP  && wallColision(rightPaddle) === "truetop"){
+      rightPaddle.speedY = 0
+    }
+    else if (event.which === KEY.UP ){
+      rightPaddle.speedY = -5
+    }
+   
+   
+  }//stop left paddles
   function handleKeyUp2(event) {
    if (event.which === KEY.UP){
       rightPaddle.speedY = 0
@@ -141,6 +154,29 @@ function handleKeyUp(event) {
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
   
+function wallColision(obj){
+  board.leftX = board.x;
+  board.topY = board.y;
+  board.rightX = board.x + BOARD_WIDTH;
+  board.bottomY = board.y + BOARD_HEIGHT;
+
+ obj.leftX = obj.x;
+ obj.topY = obj.y;
+ obj.rightX = obj.x + obj.width;
+ obj.bottomY = obj.y + obj.height;
+
+
+
+  if(obj.topY <= board.topY 
+     ){
+      return "truetop"
+  }
+  else if(obj.bottomY >= board.bottomY){
+    return "truebottom"
+   
+  }
+}
+console.log(wallColision(rightPaddle))
 
   function repositionGameItem() {
     leftPaddle.x += leftPaddle.speedX
@@ -151,7 +187,6 @@ function handleKeyUp(event) {
     ball.y += ball.speedY
   }
 
-//ball and paddles move
   function moveObject() {
     $("#rightPaddle").css("top",rightPaddle.y);
     $("#leftPaddle").css("top", leftPaddle.y);
@@ -159,7 +194,6 @@ function handleKeyUp(event) {
     $(ball.id).css('top', ball.y);
   }
  
-  //start the ball moving random
   function startBall(){
     $('#ball')
     .css('top', 220)
@@ -171,10 +205,6 @@ function handleKeyUp(event) {
    
    
   }
-
-  function wallCollision(obj){
-
-}
 
   function endGame() {
     // stop the interval timer
