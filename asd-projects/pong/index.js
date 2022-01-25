@@ -13,7 +13,7 @@ function runProgram(){
   const BOARD_WIDTH = $("#board").width();
   const BOARD_HEIGHT = $("#board").height();
 
-
+//gets ride of magic numbers
   var KEY = {
     "UP": 38,
     "DOWN": 40,
@@ -23,7 +23,7 @@ function runProgram(){
 
   // Game Item Objects
   
-  
+  //factory function
   function factory(elementId) {
 var gameItem = {};
 gameItem.id = elementId;
@@ -154,6 +154,7 @@ function handleKeyUp(event) {
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
   
+  //wall collsiion
 function wallColision(obj){
   board.leftX = board.x;
   board.topY = board.y;
@@ -187,6 +188,7 @@ console.log(wallColision(rightPaddle))
     ball.y += ball.speedY
   }
 
+
   function moveObject() {
     $("#rightPaddle").css("top",rightPaddle.y);
     $("#leftPaddle").css("top", leftPaddle.y);
@@ -194,6 +196,7 @@ console.log(wallColision(rightPaddle))
     $(ball.id).css('top', ball.y);
   }
  
+  //starts the ball and moves it in a random direcction
   function startBall(){
     $('#ball')
     .css('top', 220)
@@ -206,6 +209,7 @@ console.log(wallColision(rightPaddle))
    
   }
 
+  // helps end the game
   function endGame() {
     // stop the interval timer
     clearInterval(interval);
